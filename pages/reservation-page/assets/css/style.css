@@ -1,0 +1,165 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(15, 23, 42, 0.8);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    font-size: 1.8rem;
+    color: #facc15;
+}
+nav .logo a {
+    margin: 0 1rem;
+    color: #facc15;
+    text-decoration: none;
+}
+nav .menu a:hover {
+    color: #facc15;
+}
+
+/* Reservation Page */
+.reservation-page {
+    padding: 3rem 2rem;
+}
+
+/* Cinema Screen */
+#screen {
+    background: rgba(43, 53, 76, 0.8);
+    color: #facc15;
+    font-size: 2rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Cinema Seat Map */
+#seat-map {
+    display: grid;
+    grid-template-columns: repeat(5, 40px); /* 5 seats per row */
+    justify-content: center;
+    gap: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #1e293b;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.seat.selected {
+    background-color: #facc15;
+    color: white;
+}
+
+.seat.occupied {
+    background-color: #e11d48;
+    cursor: not-allowed;
+}
+
+.seat:not(.occupied):hover {
+    background-color: #3b82f6;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.seat .seat-label {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+/* Reservation Form */
+.reservation-details {
+    background-color: #1e293b;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    margin-top: 2rem;
+    max-width: 400px;
+    width: 100%;
+}
+
+.reservation-details label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.reservation-details input,
+.reservation-details select {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #1e293b;
+    color: white;
+}
+
+button {
+    background-color: #facc15;
+    color: #0f172a;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+button:hover {
+    background-color: #fbbf24;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background-color: #1e293b;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #facc15;
+}
